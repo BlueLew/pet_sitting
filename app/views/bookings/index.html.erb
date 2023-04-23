@@ -1,0 +1,13 @@
+<h1>Admin page</h1>
+<h2>List of Bookings</h2>
+
+<% @bookings.each do |booking| %>
+  <p>
+    <%= "Owner: #{booking.first_name} #{booking.last_name}" %>
+    <%= "Name of pet: #{booking.animal_name}" %>
+    <%= "Type of pet: #{booking.animal_type}" %>
+    <%= "Length of appointment: #{booking.hours_requested} hours" %>
+    <%= "Date and time of appointment: #{booking.date_of_service.strftime('%B %d, %Y at %I:%M %p')}" %>
+    <%= "Cost of service: #{number_to_currency(booking.cost_of_service)}" %>
+  </p>
+<% end %>
