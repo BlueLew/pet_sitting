@@ -1,0 +1,61 @@
+<%= render 'shared/errors', obj: @booking %>
+
+<div class='row'>
+  <div class='col-12'>
+    <%= form_for(@booking, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+      <div class='form-group mb-3'>
+        <div class='control-label col-2'>
+          <%= f.label :first_name, "Owner's first name" %>
+        </div>
+        <div class='col-10'>
+          <%= f.text_field :first_name %>
+        </div>
+      </div>
+      <div class='form-group mb-3'>
+        <div class='control-label col-2'>
+          <%= f.label :last_name, "Owner's last name" %>
+        </div>
+        <div class='col-10'>
+          <%= f.text_field :last_name %>
+        </div>
+      </div>
+      <div class='form-group mb-3'>
+        <div class='control-label col-2'>
+          <%= f.label :animal_name, "Pet's name" %>
+        </div>
+        <div class='col-10'>
+          <%= f.text_field :animal_name %>
+        </div>
+      </div>
+      <div class='form-group mb-3'>
+        <div class='control-label col-2'>
+          <%= f.label :animal_type, "Pet type" %>
+        </div>
+        <div class='col-10'>
+          <%= f.select :animal_type, [['cat', 'cat'], ['dog', 'dog']]  %>
+        </div>
+      </div>
+      <div class='form-group mb-3'>
+        <div class='control-label col-2'>
+          <%= f.label :hours_requested, 'Hours for booking' %>
+        </div>
+        <div class='col-10'>
+          <%= f.select :hours_requested, [['2 hrs', 2], ['3 hrs', 3], ['4 hrs', 4], ['5 hrs', 5], ['6 hrs', 6], ['7 hrs', 7], ['8 hrs', 8]] %>
+        </div>
+      </div>
+      <div class='form-group mb-3'>
+        <div class='control-label col-2'>
+          <%= f.label :date_of_service, 'Date of service' %>
+        </div>
+        <div class='col-10'>
+          <%= f.datetime_field :date_of_service %>
+        </div>
+      </div>
+      <div class='form-group mb-3'>
+        <div class='col-10'>
+          <%= f.submit 'Schedule', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

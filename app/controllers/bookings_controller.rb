@@ -13,12 +13,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    if @booking.save!
+    if @booking.save
       flash[:success] = 'Booking created successfully'
       redirect_to bookings_url
     else
-      flash[:error] = 'Booking could not be created'
-      redirect_to new_booking_url
+      render 'new'
     end
   end
 
