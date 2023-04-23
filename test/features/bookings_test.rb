@@ -2,6 +2,7 @@
 
 require 'application_system_test_case'
 
+# Bookings system test
 class BookingsTest < ApplicationSystemTestCase
   test 'user creates a new booking' do
     visit new_booking_path
