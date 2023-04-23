@@ -11,6 +11,7 @@ class Booking < ApplicationRecord
   validates :hours_requested,
             numericality: { only_integer: true, greater_than_or_equal_to: 2, less_than_or_equal_to: 8 }
   validates :animal_type, inclusion: { in: %w[dog cat] }
+  validate :date_of_service_cannot_be_in_the_past
 
   def cost_of_service
     cost = 20.0
@@ -21,5 +22,13 @@ class Booking < ApplicationRecord
             end
 
     cost
+  end
+
+  private
+
+  def date_of_service_cannot_be_in_the_past
+    return unless date_of_service.present? && date_of_service < Time.zone.now
+
+    errors.add(:date_of_service, "can't be in the past")
   end
 end
