@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg bg-primary bg-opacity-75 ">
+  <div class="container-fluid">
+    <div class='navbar-hearder'>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%= link_to "LoadUp's Cat and Dog Sitting Service", root_path, class: 'navbar-brand', id: 'logo' %>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav">
+        <li class='nav-item'>
+          <%= link_to 'Schedule', new_booking_path, class: 'nav-link' %>
+        </li>
+        <li class='nav-item'>
+          <%= link_to 'All bookings', bookings_path, class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
