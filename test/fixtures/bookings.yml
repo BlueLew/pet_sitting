@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+dog:
+  first_name: Ted
+  last_name: Lasso
+  animal_name: Zava
+  animal_type: dog
+  hours_requested: 2
+  date_of_service: 2023-04-22 14:10:14
+
+cat:
+  first_name: Chuck
+  last_name: Norris
+  animal_name: Whiskers
+  animal_type: cat
+  hours_requested: 3
+  date_of_service: 2023-04-22 14:10:14
