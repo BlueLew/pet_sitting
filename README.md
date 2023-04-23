@@ -1,24 +1,11 @@
-# README
+# Ruby on Rails App for LoadUp's Cat and Dog Sitting Service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was created as part of a coding challenge for LoadUp. The app allows users to schedule cat or dog sitting for a specific date and time. It has and 'Admin page' which lists all scheduled appointments.
 
-Things you may want to cover:
+- Ruby 3.2.2
 
-* Ruby version
+- Rails 7.0.4
 
-* System dependencies
+- Database: Postgres
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Testing: Minitest
