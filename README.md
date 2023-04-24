@@ -15,26 +15,17 @@ This app was created as part of a coding challenge for LoadUp. The app allows us
 LoadUp is rolling out a new service, cat and dog sitting. The product requirements are as follows:
 
 1. A form to collect bookings that takes:
-
-  a. First Name
-
-  b. Last Name
-
-  c. Animal Name
-
-  d. Animal Type (Dog/Cat)
-
-  e. Hours Requested (min 2, max 8)
-
-  f. Date of service
+  * First Name
+  * Last Name
+  * Animal Name
+  * Animal Type (Dog/Cat)
+  * Hours Requested (min 2, max 8)
+  * Date of service
 
 2. A "pricing engine" to determine the cost of service
-
-  a. Base charge of $20
-
-  b. $10 additional per hour for dogs
-
-  c. $5 additional per hour for cats
+  * Base charge of $20
+  * $10 additional per hour for dogs
+  * $5 additional per hour for cats
 
 3. Display of all bookings on a separate page ("admin" pages)
 
