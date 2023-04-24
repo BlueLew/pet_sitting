@@ -2,8 +2,8 @@
 
 require 'application_system_test_case'
 
-# Bookings system test
-class BookingsTest < ApplicationSystemTestCase
+# Booking flow test
+class BookingFlowTest < ApplicationSystemTestCase
   test 'user creates a new booking' do
     visit new_booking_path
 
@@ -14,7 +14,7 @@ class BookingsTest < ApplicationSystemTestCase
     select 'dog', from: 'Pet type'
     select '3', from: 'Hours for booking'
     select '2023', from: 'booking_date_of_service_1i' # Select '2023' from the dropdown for year
-    select 'May', from: 'booking_date_of_service_2i' # Select 'May' from the dropdown for month
+    select 'July', from: 'booking_date_of_service_2i' # Select 'May' from the dropdown for month
     select '1', from: 'booking_date_of_service_3i' # Select '1' from the dropdown for day
     select '12 PM', from: 'booking_date_of_service_4i' # Select '12' from the dropdown for hour
     select '00', from: 'booking_date_of_service_5i' # Select '00' from the dropdown for minute
@@ -22,6 +22,7 @@ class BookingsTest < ApplicationSystemTestCase
 
     # Ensure that the booking was created successfully
     assert_text 'Booking created successfully'
+    assert_current_path bookings_path
   end
 
   test 'user creates a new booking with invalid data' do
@@ -31,7 +32,7 @@ class BookingsTest < ApplicationSystemTestCase
     select 'dog', from: 'Pet type'
     select '3', from: 'Hours for booking'
     select '2023', from: 'booking_date_of_service_1i' # Select '2023' from the dropdown for year
-    select 'May', from: 'booking_date_of_service_2i' # Select 'May' from the dropdown for month
+    select 'July', from: 'booking_date_of_service_2i' # Select 'May' from the dropdown for month
     select '1', from: 'booking_date_of_service_3i' # Select '1' from the dropdown for day
     select '12 PM', from: 'booking_date_of_service_4i' # Select '12' from the dropdown for hour
     select '00', from: 'booking_date_of_service_5i' # Select '00' from the dropdown for minute
